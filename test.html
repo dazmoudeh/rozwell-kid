@@ -2,84 +2,136 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./assets/stylesheets/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Amatic+SC:400,700" rel="stylesheet">
 <style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Amatic SC', cursive;
-    font-size: 30px;
-}
-
-h1 {
+.navbar {
   font-family: 'Amatic SC', cursive;
-  font-size: 150px;
-  margin: auto;
+  font-size: 20px;
 }
-
 table {
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  table-layout: auto;
+  /* border-bottom: 1px solid black; */
+  border-collapse: collapse;
+}
+th {
+  font-family: 'Amatic SC', cursive;
+  font-size: 36px;
+}
+td {
+  font-family: 'Amatic SC', cursive;
+  font-size: 18px;
+}
+tr {
+  border-bottom: 1px solid black;
+
 }
 
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+.ticket {
+     text-align: center;
+     width: 120px;
+     border: 1px solid black;
+     border-color: black;
 }
 
-.content {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.65);
-    color: #f1f1f1;
-    width: 100%;
-    height: 100%;
-    padding: 80px;
+.ticket:hover {
+     background-color: gray;
+     color: white;
 }
 
+.nav-band {
+    float: left;
+    height: 50px;
+    padding: 15px 15px 15px 0px;
+    font-size: 40px;
+    line-height: 20px;
+    color: white;
+}
 </style>
 </head>
 <body>
 
-<video autoplay muted loop id="myVideo">
-  <source src="./assets/videos/wendys-trash-can.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
-
-<div class="content">
-<table width="550px" align="center">
-  <tr>
-    <td colspan="5">
-      <h1 id="myBtn" onclick="myFunction()">Rozwell Kid</h1>
-    </td>
-  </tr>
-  <tr>
-    <td>About</td>
-    <td>Discography</td>
-    <td>Media</td>
-    <td>Merch</td>
-    <td>Tour</td>
-  </tr>
-</table>
-</div>
-
-<script>
-// Get the video
-var video = document.getElementById("myVideo");
-
-// Video mute & unmute function
-function myFunction() {
-  if(video.muted){
-video.muted = false;
-} else {
-video.muted = true;
-}
-}
-</script>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+         <div class="container">
+           <div class="navbar-header">
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+             </button>
+             <a class="nav-band" href="index.html">Rozwell Kid</a>
+           </div>
+           <div id="navbar" class="collapse navbar-collapse">
+             <ul class="nav navbar-nav">
+               <li class="active"><a href="#">About</a></li>
+               <li><a href="#">Discography</a></li>
+               <li><a href="#">Merch</a></li>
+               <li><a href="#">Media</a></li>
+               <li><a href="#">Tour</a></li>
+             </ul>
+           </div>
+         </div>
+       </nav>
+<h1>Tour</h1>
+<div class="container">
+       <table>
+         <tr>
+           <td>
+             <table>
+               <tr>
+                 <th>City</th>
+               </tr>
+               <tr>
+                 <td>Date</td>
+               </tr>
+             </table>
+           </td>
+           <th>Tickets</th>
+         </tr>
+         <tr>
+           <td>
+             <table>
+               <tr>
+                 <th>La Jolla, CA</th>
+               </tr>
+               <tr>
+                 <td>Fri, Nov 1 at The Che Cafe Collective</td>
+               </tr>
+             </table>
+           </td>
+           <th class="ticket">Tickets</th>
+         </tr>
+         <tr>
+           <td>
+             <table>
+               <tr>
+                 <th>Los Angeles, CA</th>
+               </tr>
+               <tr>
+                 <td>Sat. Nov 3 at The High Hat</td>
+               </tr>
+             </table>
+           </td>
+           <th class="ticket">Tickets</th>
+         </tr>
+         <tr>
+           <td>
+             <table>
+               <tr>
+                 <th>San Francisco, CA</th>
+               </tr>
+               <tr>
+                 <td>Sun, Nov 4 at Rickshaw Stop</td>
+               </tr>
+             </table>
+           </td>
+           <th class="ticket">Tickets</th>
+         </tr>
+       </table>
+     </div>
 
 </body>
 </html>
