@@ -4,12 +4,12 @@
 
 body {
     margin: 0;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Amatic SC', sans-serif;
     font-size: 30px;
 }
 
 h1 {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Amatic SC', sans-serif;
   font-size: 150px;
   margin: auto;
   transition: all .5s ease-in-out;
