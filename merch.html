@@ -25,6 +25,116 @@
   </div>
 <div class="container">
 <h1>Merch</h1>
+<div id="myBtnContainer" class="btn-bar">
+  <button class="btn " onclick="filterSelection('all')"> Show all</button>
+  <button class="btn " onclick="filterSelection('tops')">Tops</button>
+  <button class="btn " onclick="filterSelection('music')">Music</button>
+  <button class="btn " onclick="filterSelection('accessories')">Accessories</button>
+</div>
 
+  <div class="filterDiv tops merch">
+    <img src="./assets/images/merch/koala-crew.png"/>
+    <div class="overlay">Koala crewneck</div>
+  </div>
+  <div class="filterDiv tops merch">
+    <img src="./assets/images/merch/pizza-crew.png" />
+    <div class="overlay">Pizza crewneck</div>
+  </div>
+  <div class="filterDiv tops merch">
+    <img src="./assets/images/merch/pizza-tee.png" />
+    <div class="overlay">Pizza tee</div>
+  </div>
+  <div class="filterDiv tops merch">
+    <img src="./assets/images/merch/ringer-tee.png" />
+    <div class="overlay">Ringer tee</div>
+  </div>
+  <div class="filterDiv tops merch">
+    <img src="./assets/images/merch/mustard-tee.png" />
+    <div class="overlay">Mustard Skull tee</div>
+  </div>
+  <div class="filterDiv tops merch">
+    <img src="./assets/images/merch/ketchup-tee.png" />
+    <div class="overlay">Ketchup Skull tee</div>
+  </div>
+  <div class="filterDiv music merch">
+    <img src="./assets/images/merch/vinyl.png" />
+    <div class="overlay">7" split vinyl</div>
+  </div>
+  <div class="filterDiv music merch">
+    <img src="./assets/images/merch/unmacho-cassette.png" />
+    <div class="overlay">Unmacho cassette</div>
+  </div>
+  <div class="filterDiv music merch">
+    <img src="./assets/images/merch/precious-art-cassette.png" />
+    <div class="overlay">Precious Art cassette</div>
+  </div>
+  <div class="filterDiv music merch">
+    <img src="./assets/images/merch/lp-cassette.png" />
+    <div class="overlay">LP cassette</div>
+  </div>
+  <div class="filterDiv accessories merch">
+    <img src="./assets/images/merch/stickers.png" />
+    <div class="overlay">Sticker bundle</div>
+  </div>
+  <div class="filterDiv accessories merch">
+    <img src="./assets/images/merch/car-sticker.png" />
+    <div class="overlay">My Other Car sticker</div>
+  </div>
+  <div class="filterDiv accessories merch">
+    <img src="./assets/images/merch/buttons.png" />
+    <div class="overlay">Buttons</div>
+  </div>
+  <div class="filterDiv accessories merch">
+    <img src="./assets/images/merch/keychain.png" />
+    <div class="overlay">Michael Key-ton Keychain</div>
+  </div>
+</div>
+
+<script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+    }
+  // Show filtered elements
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+    }
+  // Hide elements that are not selected
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  // Add active class to the current control button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace("active","");
+      this.className += "active";
+    });
+  }
+</script>
 </body>
 </html>

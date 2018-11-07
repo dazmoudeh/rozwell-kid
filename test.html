@@ -1,49 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="./assets/stylesheets/index.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Amatic+SC:400,700" rel="stylesheet">
-<link href="./assets/stylesheets/flexboxgrid.min.css" rel="stylesheet"/>
+  <title>Merch</title>
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Amatic+SC:400,700" rel="stylesheet">
+  <link href="./assets/stylesheets/inside.css" rel="stylesheet"/>
+  <link href="./assets/stylesheets/flexboxgrid.min.css" rel="stylesheet"/>
 </head>
 <body>
-
-<video autoplay muted loop id="myVideo">
-  <source src="./assets/videos/wendys-trash-can.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
-
-<div class="conatiner content">
-  <img src="./assets/images/logo.png" id="myBtn" onclick="myFunction()">
-  <div class="row">
-      <div class="col-xs-3"></div>
-      <div class="col-xs-6">
+  <div class="header">
+    <div class="container">
       <div class="row">
-          <div class="col-sm col-xs-12 pad"><a href="about.html">About</a></div>
-          <div class="col-sm col-xs-12 pad"><a href="disc.html">Discography</a></div>
-          <div class="col-sm col-xs-12 pad"><a href="media.html">Media</a></div>
-          <div class="col-sm col-xs-12 pad"><a href="merch.html">Merch</a></div>
-          <div class="col-sm col-xs-12 pad"><a href="tour.html">Tour</a></div>
+        <div class="col-sm-4">
+        <a class="nav-band" href="index.html">Rozwell Kid</a>
+        </div>
+        <nav class="col-sm-8">
+          <a href="about.html">About</a>
+          <a href="disc.html">Discography</a>
+          <a href="media.html">Media</a>
+          <a class="active" href="#">Merch</a>
+          <a href="tour.html">Tour</a>
+        </nav>
       </div>
     </div>
-<div class="col-xs-3"></div>
+  </div>
+<div class="container">
+<h1>Merch</h1>
+<div id="myBtnContainer" class="btn-bar">
+  <button class="btn " onclick="filterSelection('all')"> Show all</button>
+  <button class="btn " onclick="filterSelection('1')">1</button>
+  <button class="btn " onclick="filterSelection('2')">2</button>
+  <button class="btn " onclick="filterSelection('3')">3</button>
 </div>
 
+  <div class="filterDiv 1">
+    <img src="./assets/images/precious-art.jpg" />
+  </div>
+  <div class="filterDiv 2">
+    <img src="./assets/images/too-shabby.jpg" />
+  </div>
+  <div class="filterDiv 3">
+    <img src="./assets/images/unmacho.jpg" />
+  </div>
 </div>
 
 <script>
-// Get the video
-var video = document.getElementById("myVideo");
-
-// Video mute & unmute function
-function myFunction() {
-  if(video.muted){
-video.muted = false;
-} else {
-video.muted = true;
-}
-}
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+    }
+  // Show filtered elements
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
+    }
+    }
+  // Hide elements that are not selected
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  // Add active class to the current control button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace("active","");
+      this.className += "active";
+    });
+  }
 </script>
-
 </body>
 </html>
