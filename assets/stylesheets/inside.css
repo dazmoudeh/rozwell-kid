@@ -235,3 +235,10 @@ section.group iframe {
 .disc-margin {
   margin-bottom: 80px;
 }
+
+.back {
+  background-color: #d3d3d3;
+  color: #404040;
+  width: 100%;
+  font-weight: 700;
+}
