@@ -2,22 +2,73 @@
 <html lang="en">
 <head>
   <title>Media</title>
-  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Amatic+SC:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Amatic+SC:400,700" rel="stylesheet">
   <link href="./assets/stylesheets/inside.css" rel="stylesheet"/>
+  <link href="./assets/stylesheets/flexboxgrid.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="./assets/stylesheets/lightbox.min.css" />
 </head>
 <body>
-  <ul>
-  <div class="container">
-  <a class="nav-band" href="index.html">Rozwell Kid</a>
-  <li><a href="about.html">About</a></li>
-  <li><a href="disc.html">Discography</a></li>
-  <li><a class="active" href="#">Media</a></li>
-  <li><a href="merch.html">Merch</a></li>
-  <li><a href="tour.html">Tour</a></li>
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+        <a class="nav-band" href="index.html">Rozwell Kid</a>
+        </div>
+        <nav class="col-sm-8">
+          <a href="about.html">About</a>
+          <a href="disc.html">Discography</a>
+          <a class="active" href="#">Media</a>
+          <a href="merch.html">Merch</a>
+          <a href="tour.html">Tour</a>
+        </nav>
+      </div>
+    </div>
   </div>
-  </ul>
 <div class="container">
 <h1>Media</h1>
-
+<div class="row">
+<!-- Group -->
+<section class="group">
+  <a href="./assets/images/library.jpg" data-title="Library" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/library.jpg" />
+  </a>
+  <a href="./assets/images/window.jpg" data-title="By the window" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/window.jpg" />
+  </a>
+  <a href="./assets/images/shredding.jpg" data-title="Shred for me" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/shredding.jpg" />
+  </a>
+  <a href="./assets/images/wave.jpg" data-title="Waving" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/wave.jpg" />
+  </a>
+  <a href="./assets/images/couch.jpg" data-title="Couch" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/couch.jpg" />
+  </a>
+  <a href="./assets/images/group.jpg" data-title="Group" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/group.jpg" />
+  </a>
+  <a href="./assets/images/back-to-back.jpg" data-title="Back to back" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/back-to-back.jpg" />
+  </a>
+  <a href="./assets/images/sing.jpg" data-title="Sing" data-lightbox="rozwell-kid">
+    <img src="./assets/images/thumbnails/sing.jpg" />
+  </a>
+</section>
+</div>
+<section class="group">
+  <iframe width="544" height="306" src="https://www.youtube-nocookie.com/embed/dLUesSXOC3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="544" height="306" src="https://www.youtube-nocookie.com/embed/T6PgLoFfRkA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="544" height="306" src="https://www.youtube-nocookie.com/embed/s_1JpybEMcU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="544" height="306" src="https://www.youtube-nocookie.com/embed/M8jDUgQP7XU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="544" height="306" src="https://www.youtube-nocookie.com/embed/dkDZDVn2fn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="544" height="306" src="https://www.youtube-nocookie.com/embed/DuOY1S_eRok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+</div>
+<script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="./assets/javascripts/lightbox.min.js"></script>
+<br>
 </body>
 </html>

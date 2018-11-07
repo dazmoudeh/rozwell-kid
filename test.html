@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Discography</title>
-  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand|Amatic+SC:400,700" rel="stylesheet">
-  <link href="./assets/stylesheets/inside.css" rel="stylesheet"/>
-  <link href="./assets/stylesheets/flexboxgrid.min.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./assets/stylesheets/index.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Amatic+SC:400,700" rel="stylesheet">
+<link href="./assets/stylesheets/flexboxgrid.min.css" rel="stylesheet"/>
 </head>
 <body>
-  <ul>
-  <div class="container">
-  <a class="nav-band" href="index.html">Rozwell Kid</a>
-  <li><a href="about.html">About</a></li>
-  <li><a class="active" href="#">Discography</a></li>
-  <li><a href="media.html">Media</a></li>
-  <li><a href="merch.html">Merch</a></li>
-  <li><a href="tour.html">Tour</a></li>
-  </div>
-  </ul>
-<div class="container">
-<h1>Discography</h1>
-<div class="row">
-    <div class="col-sm-4"><img width="100%" height="100%" src="./assets/images/unmacho.jpg"></div>
-    <div class="col-sm-8 col-xs-12"><iframe style="border: 0; width: 100%; height: 100%; min-height:250px;" src="https://bandcamp.com/EmbeddedPlayer/album=1580295269/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://rozwellkid.bandcamp.com/album/unmacho">Unmacho by Rozwell Kid</a></iframe></div>
+
+<video autoplay muted loop id="myVideo">
+  <source src="./assets/videos/wendys-trash-can.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="conatiner content">
+  <img src="./assets/images/logo.png" id="myBtn" onclick="myFunction()">
+  <div class="row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+      <div class="row">
+          <div class="col-sm col-xs-12 pad"><a href="about.html">About</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="disc.html">Discography</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="media.html">Media</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="merch.html">Merch</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="tour.html">Tour</a></div>
+      </div>
+    </div>
+<div class="col-xs-3"></div>
 </div>
-<div class="row">
-  <div class="col">Released February 2013</div>
+
 </div>
-<div class="row">
-    <div class="col-sm-4"><img width="100%" height="100%" src="./assets/images/too-shabby.jpg"></div>
-    <div class="col-sm-8 col-xs-12"><iframe style="border: 0; width: 100%; height: 100%; min-height:250px;" src="https://bandcamp.com/EmbeddedPlayer/album=3542868586/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://rozwellkid.bandcamp.com/album/too-shabby">Too Shabby by Rozwell Kid</a></iframe></div>
-</div>
-<div class="row">
-  <div class="col">Released November 2014</div>
-</div>
-<div class="row">
-    <div class="col-sm-4"><img width="100%" height="100%" src="./assets/images/precious-art.jpg"></div>
-    <div class="col-sm-8 col-xs-12"><iframe style="border: 0; width: 100%; height: 100%; min-height:250px;" src="https://bandcamp.com/EmbeddedPlayer/album=2651321082/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="http://rozwellkid.bandcamp.com/album/precious-art">Precious Art by Rozwell Kid</a></iframe></div>
-</div>
-<div class="row">
-  <div class="col">Released June 2017</div>
-</div>
+
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Video mute & unmute function
+function myFunction() {
+  if(video.muted){
+video.muted = false;
+} else {
+video.muted = true;
+}
+}
+</script>
+
 </body>
 </html>

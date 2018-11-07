@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./assets/stylesheets/index.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Amatic+SC:400,700" rel="stylesheet">
+<link href="./assets/stylesheets/flexboxgrid.min.css" rel="stylesheet"/>
 </head>
 <body>
 
@@ -12,21 +13,22 @@
   Your browser does not support HTML5 video.
 </video>
 
-<div class="content">
-<table width="550px" align="center">
-  <tr>
-    <td colspan="5">
-      <h1 id="myBtn" onclick="myFunction()">Rozwell Kid</h1>
-    </td>
-  </tr>
-  <tr>
-    <td><a href="about.html">About</a></td>
-    <td><a href="disc.html">Discography</a></td>
-    <td><a href="media.html">Media</a></td>
-    <td><a href="merch.html">Merch</a></td>
-    <td><a href="tour.html">Tour</a></td>
-  </tr>
-</table>
+<div class="conatiner content">
+  <h1 id="myBtn" onclick="myFunction()"><center>Rozwell Kid</center></h1>
+  <div class="row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-6">
+      <div class="row">
+          <div class="col-sm col-xs-12 pad"><a href="about.html">About</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="disc.html">Discography</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="media.html">Media</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="merch.html">Merch</a></div>
+          <div class="col-sm col-xs-12 pad"><a href="tour.html">Tour</a></div>
+      </div>
+    </div>
+<div class="col-xs-3"></div>
+</div>
+
 </div>
 
 <script>
